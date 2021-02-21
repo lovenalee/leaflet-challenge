@@ -29,7 +29,7 @@ d3.json(queryUrl, function(data) {
         opacity: 0.1,
         fillOpacity: 0.7,
         fillColor: mapColor(feature.properties.mag),
-        color: "#000000",
+        color: 'white',
         radius: mapRadius(feature.properties.mag),
         stroke: true,
         weight: 0.5
