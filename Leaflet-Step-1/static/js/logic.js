@@ -26,8 +26,8 @@ d3.json(queryUrl, function(data) {
     
     function mapStyle(feature) {
         return {
-        opacity: 1,
-        fillOpacity: 1,
+        opacity: 0.1,
+        fillOpacity: 0.7,
         fillColor: mapColor(feature.properties.mag),
         color: "#000000",
         radius: mapRadius(feature.properties.mag),
@@ -42,9 +42,8 @@ d3.json(queryUrl, function(data) {
                 mag > 3 ? '#E31A1C':
                 mag > 2 ? '#FC4E2A':
                 mag > 1 ? '#FD8D3C':
-                        '#FED976';
-        
-    }
+                        '#FED976';   
+    } 
 
     function mapRadius(mag) {
         if (mag === 0) {
@@ -53,6 +52,7 @@ d3.json(queryUrl, function(data) {
 
         return mag * 5;
     }
+
 
     L.geoJson(data, {
 
